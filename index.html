@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's Next</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a coffe<br>It's <span class="">Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Laborum, error vel facere repellendus provident enim voluptatibus.
+                    Quibusdam ducimus perspiciatis et rerum possimus magnam quidem
+                    deleniti, aspernatur facere quod at vel?</p>
+                    <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thmub">
+            <li><img src="img/thumb1.png" onclick="myChange('img/img1.png'); changeColor('#017143')"></li>
+            <li><img src="img/thumb2.png" onclick="myChange('img/img2.png'); changeColor('#eb7495')";></li>
+            <li><img src="img/thumb3.png" onclick="myChange('img/img3.png'); changeColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script>
+        function changeColor(here){
+            const color = document.querySelector('.circle');
+            color.style.background = here;
+        }
+    </script>
+    <script type="text/javascript">
+        function myChange(img){
+            document.querySelector('.starbucks').src = img;
+        }
+    </script>
+    <script>
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            navigation.classList.toggle('active')
+            menuToggle.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
